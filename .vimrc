@@ -1,3 +1,8 @@
+set encoding=utf-8
+set ambiwidth=double
+let &termencoding=&encoding
+
+
 set list
 set listchars=tab:>-,trail:-
 set selectmode=mouse
@@ -25,6 +30,8 @@ set cindent
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+filetype plugin indent on
 
 "map <F2> :NERDTreeToggle <CR>
 ""map <F3> :TlistToggle <CR>

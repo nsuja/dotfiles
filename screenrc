@@ -33,7 +33,7 @@ shell -$SHELL
 # set every new windows hardstatus line to somenthing descriptive
 # defhstatus "screen: ^En (^Et)"
 
-defscrollback 3000
+defscrollback 10000
 
 # don't kill window after the process died
 # zombie "^["
@@ -148,10 +148,6 @@ bind ^] paste [.]
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %Y/%m/%d %{W}%c %{g} %l]'
 
-bindkey "^[[1;5D" prev
-bindkey "^[[1;5C" next
-bindkey "^[[1;5B" screen
-bindkey "^[[1;5A" title
 bindkey "^[[1;2D" prev
 bindkey "^[[1;2C" next
 bindkey "^[[1;2B" screen
